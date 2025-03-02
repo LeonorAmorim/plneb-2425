@@ -1,5 +1,5 @@
 # Sumário
-O objetivo deste exercício foi processar um dicionário médico em formato de texto e transformá-lo num arquivo HTML, onde cada conceito aparece acima de sua respetiva descrição, sem erros de formatação.
+O objetivo deste exercício foi processar um dicionário médico em formato de texto e transformá-lo num arquivo HTML, onde cada conceito aparece acima da respetiva descrição, sem erros de formatação.
 
 # Decisões de Implementação
 
