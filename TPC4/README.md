@@ -10,7 +10,7 @@ Esta página fornece informações sobre diferentes raças de cães. Os utilizad
 ## Como Funciona
 - **HTML & CSS**: A página é estruturada utilizando HTML, com estilos fornecidos por CSS.
 - **JavaScript**: Usado para mostrar dinamicamente informações sobre as raças de cães quando selecionadas. O nome, descrição e imagem da raça serão exibidos na página.
-- **Barra de Pesquisa**: O utilizador pode digitar na barra de pesquisa para filtrar a lista de raças de cães e encontrar facilmente a raça desejada.
+- **Barra de Pesquisa**: O utilizador pode escrever na barra de pesquisa para filtrar a lista de raças de cães e encontrar facilmente a raça desejada.
 
 
 ## Tecnologias Utilizadas
