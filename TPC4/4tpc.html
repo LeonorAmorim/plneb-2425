@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raças de Cães</title>
+    <style>
+        * { box-sizing: border-box; }
+        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
+        body { font-family: Arial, sans-serif; }
+
+        header {
+            background: url('https://c02.purpledshub.com/uploads/sites/41/2022/06/Dog-love-thumbnail-bec9b1a.jpg?w=1200') center 27%;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 32px;
+            font-weight: bold;
+            position: relative;
+            height: 200px;
+        }
+
+        header h2 {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .container { display: flex; flex: 1; }
+
+        nav { width: 30%; background: #ffe5ec; padding: 20px; } 
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { margin: 10px 0; cursor: pointer; color: #ff1493; } 
+
+        article { width: 70%; padding: 20px; background: #edf6f9; } 
+        .hidden { display: none; }
+
+        footer {
+            background: #ff686b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+        }
+
+        footer img {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 80px; 
+        }
+
+
+        input { width: 100%; padding: 8px; margin-bottom: 10px; background: #ffb6c1; border: 1px solid #ff1493; color: #ff1493; } 
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>
+            Cães!
+        </h2>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <input type="text" id="searchBar" placeholder="Pesquisar raça...">
+            <ul id="dogList">
+                <li onclick="showDog('Labrador')">Labrador</li>
+                <li onclick="showDog('Bulldog')">Bulldog</li>
+                <li onclick="showDog('Poodle')">Poodle</li>
+                <li onclick="showDog('Beagle')">Beagle</li>
+                <li onclick="showDog('Dálmata')">Dálmata</li>
+                <li  onclick="showDog('Golden Retriever')">Golden Retriever</li>
+                <li onclick="showDog('Chihuahua')">Chihuahua</li>
+                <li onclick="showDog('Shiba Inu')">Shiba Inu</li>
+                <li onclick="showDog('Boxer')">Boxer</li>
+                <li onclick="showDog('Cocker Spaniel')">Cocker Spaniel</li>
+            </ul>
+        </nav>
+        
+        <article>
+            <div id="dogInfo">
+                <h1 id="dogName">Conheça mais sobre as diferentes raças de cães!</h1>
+                <img id="dogImage" src="" alt="" width="300">
+                <p id="dogDescription">Clique numa das opções ao lado para obter mais informações &#128516</p>
+            </div>
+        </article>
+    </div>
+    
+    <footer>
+        <p>Informações sobre raças de cães &#128062</p>
+        <img src="https://dogtime.com/wp-content/uploads/sites/12/2021/02/GettyImages-527854942-e1692390763614.jpg?w=1024" width="80">
+    </footer>
+    
+    <script>
+        const dogs = {
+            'Labrador': { image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg', description: 'Labrador retriever é uma raça de cães do tipo retriever originária da província de Terra Nova e Labrador no Canadá, mas desenvolvida na Inglaterra. Utilizada originalmente para a caça de aves aquáticas, a labrador retriever é conhecida como uma raça versátil, inteligente e dócil.' },
+            'Bulldog': { image: 'https://images.unsplash.com/photo-1568315056770-f4a63027dcd3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: 'O Bulldog é uma raça de cães oriunda da Inglaterra. Descende de cães (os antigos-buldogues-ingleses) utilizados para combater touros em um desporto sangrento chamado bull-baiting.' },
+            'Poodle': { image: 'https://images.unsplash.com/photo-1656869929504-6654c0585ad9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: 'Poodle, de acordo com a Federação Cinológica Internacional é oriunda da França, por ter sido reivindicada, porém ela já era há muito tempo criada em países da Europa Central como a Alemanha. Originalmente, era utilizado como cão de caça a aves aquáticas. É considerada a segunda raça mais inteligente do mundo, de acordo com a listagem elaborada por Stanley Coren.' },
+            'Beagle': { image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Beagle_600.jpg', description: 'Os beagles são representados na cultura popular desde a época elizabetana na literatura e na pintura e, mais recentemente, no cinema, televisão e quadrinhos. O Snoopy dos quadrinhos Peanuts tem sido promovido como o "beagle mais famoso do mundo".' },
+            'Dálmata': { image: 'https://images.unsplash.com/photo-1626435872669-8bcb32be46dc?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: 'Dálmata(em croata: Dalmatinac) é uma raça de cães oriunda da região histórica da Dalmácia na Croácia, e conhecida por sua característica pelagem branca com pintas escuras. Originalmente utilizado para a caça de aves, foi também muito utilizado para acompanhar carruagens nobres na Inglaterra a partir do século XVII, por conta de sua aparência exótica e atleticismo.' },
+            'Golden Retriever': { image: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg', description: 'O Golden Retriever é uma raça de cães originária da Escócia, desenvolvida no final do século XIX. Reconhecido por sua lealdade, inteligência e habilidades de trabalho, o Golden Retriever é frequentemente utilizado como cão-guia para deficientes visuais e também em terapias.' },
+            'Chihuahua': { image: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Chihuahua1_bvdb.jpg', description: 'O Chihuahua é uma raça de cão muito pequena originária do México. É conhecida pela sua personalidade enérgica, vigilante e sua tendência a ser bastante protetora, apesar de seu tamanho pequeno.' },
+            'Shiba Inu': { image: 'https://cdn.britannica.com/71/234471-050-093F4211/shiba-inu-dog-in-the-snow.jpg', description: 'O Shiba Inu é uma raça de cães de origem japonesa, conhecida por seu comportamento independente, ousado e sua aparência semelhante a um lobo. É uma das raças mais populares do Japão.' },
+            'Boxer': { image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Male_fawn_Boxer_undocked.jpg/1200px-Male_fawn_Boxer_undocked.jpg', description: 'O Boxer é uma raça de cão originária da Alemanha, conhecida por sua energia, lealdade e natureza amigável. São frequentemente usados como cães de trabalho, incluindo cães de guarda e cães policiais.' },
+            'Cocker Spaniel': { image: 'https://www.caonosso.pt/wp-content/uploads/2021/01/cocker-1.jpg.webp', description: 'O Cocker Spaniel é uma raça de cão originária da Grã-Bretanha, conhecida por sua personalidade amigável e afetuosa. A raça é frequentemente reconhecida por suas orelhas longas e pelagem ondulada.' }
+        };
+
+        function showDog(name) {
+            document.getElementById('dogName').innerText = name;
+            document.getElementById('dogImage').src = dogs[name].image;
+            document.getElementById('dogDescription').innerText = dogs[name].description;
+            document.getElementById('dogInfo').classList.remove('hidden');
+            document.getElementById('dogImage').style.display = 'block';
+        }
+        
+        document.getElementById('searchBar').addEventListener('input', function() {
+            let query = this.value.toLowerCase();
+            let regex = new RegExp(query, 'i');
+            let items = document.querySelectorAll('#dogList li');
+            
+            items.forEach(item => {
+                if (regex.test(item.innerText)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
