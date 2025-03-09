@@ -1,4 +1,4 @@
-# Raças de Cães - Página Html de Informação sobre Raças de Cães
+# Página Html de Informação sobre Raças de Cães
 
 Esta página fornece informações sobre diferentes raças de cães. Os utilizadores podem explorar várias raças clicando numa das opções da lista e obter informações, incluindo uma imagem e descrição de cada raça. Existe também uma barra de pesquisa para filtrar as raças de cães dinamicamente.
 
