@@ -1,0 +1,27 @@
+{% extends 'layout2.html' %}
+{% block head %}
+    <title>Pesquisar</title>
+{% endblock%}
+
+{% block body %}
+<form action="/pesquisar" method="POST"> 
+    <div class="mb-3">
+        <label for="designacao_search" class="form-label">Digite um conceito:</label>
+        <input type="text" class="form-control" id="designacao_search" name="designacao" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Pesquisar</button>
+</form>
+    <h3>Resultados:</h3>
+    {% if resultados and resultados != "Erro" %}
+        <div class="list-group">
+            {% for designacao, descricao in resultados.items() %}
+                <a href="/conceitos/{{ designacao }}" class="list-group-item list-group-item-action">
+                    <strong>{{ designacao }}</strong>
+                    <p>{{ descricao | safe }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    {% elif resultados == "Erro" %}
+        <p class="text-danger mt-3">Nenhum conceito encontrado.</p>
+    {% endif %}
+{% endblock %}
