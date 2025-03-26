@@ -9,6 +9,6 @@ Este projeto foi realizado utilizando Flask permitindo a visualização, adiçã
 - Obter conceitos e descrições em JSON.
 - Adição de novos conceitos através de requisições `POST`.
 - Procura de conceitos normalmente ou através de expressões regulares.
-- Acesso a uma tabela de descricções e conceitos, também esta pesquisável tanto normalmente como por expressões regulares.
+- Acesso a uma tabela de descrições e conceitos, também esta pesquisável tanto normalmente como por expressões regulares.
 
 
