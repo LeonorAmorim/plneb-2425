@@ -12,8 +12,7 @@ Este projeto demonstra como é possivel utilizar a biblioteca **Gensim** para tr
 ## Etapas Realizadas
 
 ### 1. Treino Inicial com Frases Simples
-Foi utilizado um conjunto de frases exemplo (listas de palavras) para treinar um modelo Word2Vec inicial. Esta fase serviu como introdução à biblioteca e ao processo de treino.
-
+Foi utilizado um conjunto de frases exemplo (listas de palavras) para treinar um modelo Word2Vec inicial.
 ### 2. Consulta de Vetores
 O modelo treinado foi usado para aceder à representação vetorial de palavras, como "sentence", demonstrando como estas são codificadas.
 
@@ -34,7 +33,7 @@ Com as frases dos livros, treinou-se um novo modelo Word2Vec com:
 - Vetores de tamanho 100 (`vector_size=100`)
 - 20 epochs de treino (`epochs=20`)
 
-Este modelo permite representar o vocabulário dos livros em um espaço vetorial, refletindo semelhanças semânticas baseadas no contexto de uso.
+Este modelo permitiu a representação do vocabulário presente nos livros num espaço vetorial, refletindo semelhanças semânticas baseadas no contexto de uso.
 
 ### 6. Exploração Semântica
 Foram realizadas diversas consultas ao modelo para:
