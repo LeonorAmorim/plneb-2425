@@ -60,8 +60,7 @@ Para explorar visualmente os vetores de palavras gerados pelo modelo Word2Vec, u
 ![De seguida, observa-se o termo “dobby” aparece rodeado por palavras associadas ao seu contexto como senhor, nick, elfo, doméstico, riddle, brigar, desculpe, ajuda.](images/3.png)
 ![Por fim, também verifiquei que o termo “elfo” mostra um cluster muito semelhante ao de “dobby”, com termos como gigante, doméstico, garoto, ajuda, servir, presente.](images/4.png)
 
-> As imagens devem estar numa pasta chamada `imagens/` no mesmo diretório do `README.md`.
 
 ## Conclusão
 
-Este notebook exemplifica de forma prática como aplicar Word2Vec em textos reais. Os resultados demonstram a capacidade do modelo de capturar relações semânticas complexas com base no uso das palavras em contexto.
+Este notebook exemplifica de forma prática como aplicar Word2Vec em textos reais. Os resultados demonstraram a capacidade do modelo de capturar relações semânticas complexas com base no uso das palavras em contexto.
